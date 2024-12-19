@@ -21,6 +21,37 @@ This project provides automated tests for a simple TODO application.
     * `ws`: Contains websocket tests for the TODO application endpoints.
 * `src/test/resources`: Can be used for test data or configuration files.
 
+```src
+├── main
+│   └── java
+│       └── org
+│           └── example
+│               ├── config
+│               │   └── ConfigReader.java
+│               ├── controllers
+│               │   └── TodoController.java
+│               ├── models
+│               │   └── Todo.java
+│               ├── utils
+│               │   └── EntityManager.java
+│               └── Main.java
+│               
+│               
+└── test
+    └── java
+        └── org
+           └── example
+               ├── functional
+               │   ├── DeleteTodosTest.java
+               │   ├── GetTodosTest.java
+               │   ├── PostTodosTest.java
+               │   └── PutTodosTest.java
+               ├── performance
+               │   └── PerformanceTest.java
+               ├── ws
+               │   └── WSTest.java
+               └── BaseApiTest
+
 ## Running the Tests
 
 1. **Build the project:** `mvn clean install`
@@ -96,36 +127,3 @@ This project provides automated tests for a simple TODO application.
 
 * The application can be run with `VERBOSE=1` to see more logs.
 * The focus is on the quality of automated tests and project structure. The load test is an additional task.
-
-# Project Structure
-
-```src
-├── main
-│   └── java
-│       └── org
-│           └── example
-│               ├── config
-│               │   └── ConfigReader.java
-│               ├── controllers
-│               │   └── TodoController.java
-│               ├── models
-│               │   └── Todo.java
-│               ├── utils
-│               │   └── EntityManager.java
-│               └── Main.java
-│               
-│               
-└── test
-    └── java
-        └── org
-           └── example
-               ├── functional
-               │   ├── DeleteTodosTest.java
-               │   ├── GetTodosTest.java
-               │   ├── PostTodosTest.java
-               │   └── PutTodosTest.java
-               ├── performance
-               │   └── PerformanceTest.java
-               ├── ws
-               │   └── WSTest.java
-               └── BaseApiTest
